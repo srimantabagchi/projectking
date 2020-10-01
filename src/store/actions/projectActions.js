@@ -1,6 +1,7 @@
+import { firestore } from "./../../config/fbConfig"
+
 export const createProject = (project) => {
-  return (dispatch, getState, {getFirestore}) => {
-    const firestore = getFirestore();
+  return (dispatch, getState) => {
     const profile = getState().firebase.profile;
     const authorId = getState().firebase.auth.uid;
     firestore.collection('projects').add({
