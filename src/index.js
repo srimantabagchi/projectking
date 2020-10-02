@@ -16,10 +16,17 @@ const store = createStore(rootReducer,
   )
 );
 
+const rrfConfig = {
+  userProfile: 'users',
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+  // enableClaims: true // Get custom claims along with the profile
+}
+
+
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider firebase={fbConfig}
-     config={fbConfig}
+     config={rrfConfig}
      dispatch={store.dispatch}
      createFirestoreInstance={createFirestoreInstance}>
       <App />
