@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { createFirestoreInstance } from 'redux-firestore';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import fbConfig from './config/fbConfig'
+import firebase from './config/firebase'
 
 const store = createStore(rootReducer,
   compose(
@@ -22,10 +22,9 @@ const rrfConfig = {
   // enableClaims: true // Get custom claims along with the profile
 }
 
-
 ReactDOM.render(
   <Provider store={store}>
-    <ReactReduxFirebaseProvider firebase={fbConfig}
+    <ReactReduxFirebaseProvider firebase={firebase}
      config={rrfConfig}
      dispatch={store.dispatch}
      createFirestoreInstance={createFirestoreInstance}>

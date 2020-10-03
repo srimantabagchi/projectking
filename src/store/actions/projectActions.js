@@ -1,4 +1,4 @@
-import { firestore } from "./../../config/fbConfig"
+import { firestore } from "../../config/firebase"
 
 export const createProject = (project) => {
   return (dispatch, getState) => {

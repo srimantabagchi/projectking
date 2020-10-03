@@ -1,4 +1,4 @@
-import { auth, firestore } from "./../../config/fbConfig"
+import { auth, firestore } from "../../config/firebase"
 
 export const signIn = (credentials) => {
   return (dispatch) => {
