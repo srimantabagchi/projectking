@@ -49,10 +49,4 @@ const CreateProject = () => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    createProject: (project) => dispatch(createProject(project)),
-  };
-};
-
 export default CreateProject;
